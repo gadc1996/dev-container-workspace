@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    networks:
+      - workspace
+    volumes:
+      - ..:/app
+    env_file:
+      - .env
+
+  # mysql:
+  #   image: mysql:latest
+  #   networks:
+  #     - workspace
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: root
+  #     MYSQL_DATABASE: 
+
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin
+  #   environment:
+  #     PMA_HOST: mysql
+  #     PMA_PORT: 3306
+  #   ports:
+  #     - "8081:80"
+  #   networks:
+  #     - workspace
+
+networks:
+  workspace:
