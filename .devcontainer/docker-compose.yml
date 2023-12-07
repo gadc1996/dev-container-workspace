@@ -7,8 +7,13 @@ services:
       - workspace
     volumes:
       - ..:/app
-    env_file:
-      - .env
+    # Variables used inside the container
+    environment:
+      - ZDOTDIR=/app/.dotfiles/zsh
+    
+    # Use and env file and create an example file when using external services(credentials, api keys, etc)
+    # env_file:
+    #   - .env
 
   # mysql:
   #   image: mysql:latest
