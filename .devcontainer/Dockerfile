@@ -1,3 +1,7 @@
 FROM python:3.11-bullseye
 
-WORKDIR /app
+RUN useradd -m devcontainer
+
+WORKDIR /home/devcontainer
+
+USER devcontainer

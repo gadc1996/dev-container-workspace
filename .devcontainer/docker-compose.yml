@@ -6,10 +6,10 @@ services:
     networks:
       - workspace
     volumes:
-      - ..:/app
+      - ..:/home/devcontainer
     # Variables used inside the container
-    environment:
-      - ZDOTDIR=/app/.dotfiles/zsh
+    # environment:
+    #   - ZDOTDIR=/home/devcontainer
     
     # Use and env file and create an example file when using external services(credentials, api keys, etc)
     # env_file:
