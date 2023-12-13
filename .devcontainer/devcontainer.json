@@ -4,7 +4,7 @@
 	"name": "Dev Container Workspace",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
-	"workspaceFolder": "/app",
+	"workspaceFolder": "/home/devcontainer",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -13,10 +13,7 @@
 		}
 	},
 	"overrideCommand": true,
-	"remoteUser": "vscode",
-	"mounts": [
-		"source=~/.ssh,target=/home/vscode/.ssh,type=bind",
-	],
+	"remoteUser": "devcontainer",
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
 			"installZsh": true,
@@ -24,7 +21,7 @@
 			"installOhMyZsh": true,
 			"installOhMyZshConfig": true,
 			"upgradePackages": true,
-			"username": "vscode",
+			"username": "devcontainer",
 			"userUid": "automatic",
 			"userGid": "automatic"
 		},
@@ -33,7 +30,7 @@
 			"azureDnsAutoDetection": true,
 			"installDockerBuildx": true,
 			"version": "latest",
-			"dockerDashComposeVersion": "v1"
+			"dockerDashComposeVersion": "none"
 		}
 	}
 }
